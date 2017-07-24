@@ -5,7 +5,7 @@
 var text;
 
 //I don't need to call this function below, right?
-$('#form-text').submit{ function (input) {
+$('#form-text').submit( function (input) {
 	input = $('#user-text').val();
 
 //then process it. Use the copy for the next three functions.
@@ -14,7 +14,7 @@ $('#form-text').submit{ function (input) {
 text= input.toLowerCase().split().trim()
 return text;
 }
-};
+);
 
 
 
