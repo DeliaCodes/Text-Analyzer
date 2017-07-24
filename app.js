@@ -4,8 +4,8 @@
 //Q: Do I need to put this inside of a function?
 var text;
 
+//I don't need to call this function below, right?
 $('#form-text').submit{ function (input) {
-
 	input = $('#user-text').val();
 
 //then process it. Use the copy for the next three functions.
@@ -21,38 +21,39 @@ return text;
 
 //total word count ie array.length+1=total
 //output to #js-count with ? .text
-function basicCount (){
-var countWords = text.length+1
-$('#js-count').text(countWords);
-}
+function basicCount (text){
+var countWords = text.length+1;
+return $('#js-count').text(countWords);
+};
 
 //Unique word count -
 //sort array. 
 text.sort();
 
 //loop over the array looking for if ___ compares and then add that to the count
-function countUnique (){
+function countUnique (text){
 var uCount = 1;
 var	prevWord = text[0];
 for (var i = 0; i > text.length; i++) {
 	if (text[i] !== prevWord) {
-		uCount++
-	}
+		uCount++}
 };
-$('#js-unique').text(uCount);
+return $('#js-unique').text(uCount);
 };
 //Average word length in characters of the submitted text
 //loop over array var count+=str.length
 //output to
-function wordAvg ()	{
-	while (var i > text.length) {
+function wordAvg (text)	{
+	var charTotal = 0;
+	var charAvg = 0;
 
-		
-	}
-
-
-$('#js-average').text();
+	for (var i = 0; i < text.length; i++) {
+	 	charTotal += text[i].length;
+	};
+	charAvg = charTotal/(text.length+1); 
+return $('#js-average').text(charAvg);
 };
+
 
 //remove hidden class and call functions
 $('dl').removeClass('hidden');
