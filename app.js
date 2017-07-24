@@ -23,7 +23,7 @@ return text;
 //output to #js-count with ? .text
 function basicCount (text){
 var countWords = text.length+1;
-return $('#js-count').text(countWords);
+return $('#js-count').text("Word count: " + countWords);
 };
 
 //Unique word count -
@@ -38,7 +38,7 @@ for (var i = 0; i > text.length; i++) {
 	if (text[i] !== prevWord) {
 		uCount++}
 };
-return $('#js-unique').text(uCount);
+return $('#js-unique').text("Unique word count: " + uCount);
 };
 //Average word length in characters of the submitted text
 //loop over array var count+=str.length
@@ -51,7 +51,7 @@ function wordAvg (text)	{
 	 	charTotal += text[i].length;
 	};
 	charAvg = charTotal/(text.length+1); 
-return $('#js-average').text(charAvg);
+return $('#js-average').text("Average word length: " + charAvg);
 };
 
 
